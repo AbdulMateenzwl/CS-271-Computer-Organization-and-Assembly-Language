@@ -1,0 +1,24 @@
+Include Irvine32.inc
+
+.data
+	var1=5
+	var2=4
+	var3=9
+
+.code
+main proc
+	mov eax,0
+	mov eax,var2
+	sub eax,var1
+	mov ebx,eax
+	mov eax,var3
+	neg eax
+	mul ebx
+	add eax,5
+
+
+
+	call WriteInt
+	invoke ExitProcess,0
+main endp
+end main

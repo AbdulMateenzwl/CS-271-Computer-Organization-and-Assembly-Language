@@ -1,0 +1,14 @@
+Include Irvine32.inc
+
+.data
+
+.code
+main proc
+	mov al,1110b
+	mov bl,0001b
+	sub al,bl		;sets to zero
+	mov bl,1101b
+	sub al,bl
+	invoke ExitProcess,0
+main endp
+end main

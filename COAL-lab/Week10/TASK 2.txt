@@ -1,0 +1,16 @@
+Include Irvine32.inc
+
+.stack 4086
+.data
+	testVal SWORD -170
+.code
+main proc
+	MOV eax, 0;
+	MOV ax, testVal
+	SHL eax, 16
+	SAR eax, 16
+	CALL WRITEINT
+	exit
+main endp
+
+end main

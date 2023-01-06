@@ -1,0 +1,21 @@
+Include Irvine32.inc
+
+.data
+	myString1 BYTE "Today is quiz 1 of COAL Lab Section D",0
+	myString2 BYTE ?
+.code
+main proc
+	mov edx,0
+	mov al,myString1
+	xchg al,myString2
+	mov myString1,al
+	mov edx, offset myString1
+	call WriteString
+
+	mov bl,[offset mystring2*3]
+	last=[mystring2+LENGTHOF mystring2 -1]
+
+	call WriteInt
+	invoke ExitProcess,0
+main endp
+end main

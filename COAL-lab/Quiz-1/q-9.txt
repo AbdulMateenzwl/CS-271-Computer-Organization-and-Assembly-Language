@@ -1,0 +1,17 @@
+Include Irvine32.inc
+
+.data
+	myString1 BYTE "Today is quiz 1 of COAL Lab Section D",0
+	myString2 BYTE ?
+.code
+main proc
+	mov edx,FA60h
+	mov ecx,0FF55Ch
+	xchg DX,CX
+	mul CX
+
+	
+	call WriteInt
+	invoke ExitProcess,0
+main endp
+end main

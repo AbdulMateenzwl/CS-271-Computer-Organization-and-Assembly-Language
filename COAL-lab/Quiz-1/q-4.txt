@@ -1,0 +1,24 @@
+Include Irvine32.inc
+
+.data
+	
+	myStrin1 BYTE "Hello World COAL Lab Quiz",0
+	len = $-myStrin1
+	size1 = SIZEOF myStrin1
+	type1=TYPE myStrin1
+	first=myStrin1
+	last=[myStrin1+len-2]
+.code
+main proc
+	mov eax,0
+	mov ecx,0
+	mov al,last
+	mov ch,first
+	mul ch
+	;mov eax
+
+
+	call WriteInt
+	invoke ExitProcess,0
+main endp
+end main

@@ -1,0 +1,15 @@
+Include Irvine32.inc
+
+.data
+	intArray1 DWORD 10,20,30,70,80,90,100,11,12
+	len=($-intArray1)/4
+	size1=($-intArray1)
+.code
+main proc
+	mov eax,len
+	call WriteInt
+	mov eax,size1
+	call WriteInt
+	invoke ExitProcess,0
+main endp
+end main

@@ -1,0 +1,16 @@
+Include Irvine32.inc
+
+.data
+	lbl label BYTE
+	var1 BYTE 0FFh,0FAh,5Fh,0FFh
+.code
+main proc
+	mov CL,BYTE PTR [var1+3]
+	mov BL,[lbl+1]
+	mov al,BYTE PTR[var1+2]
+	mov dx,[offset var1+2]
+	call Dumpregs
+
+	invoke ExitProcess,0
+main endp
+end main

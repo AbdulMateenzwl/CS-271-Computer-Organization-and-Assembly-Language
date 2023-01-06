@@ -1,0 +1,13 @@
+Include Irvine32.inc
+
+.data
+	const1 = 345345246
+	myArray DWORD 10 DUP(const1)
+.code
+main proc
+	mov eax,(myArray+8)
+	call WriteInt
+
+	invoke ExitProcess,0
+main endp
+end main

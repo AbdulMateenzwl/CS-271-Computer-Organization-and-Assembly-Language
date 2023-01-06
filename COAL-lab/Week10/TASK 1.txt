@@ -1,0 +1,14 @@
+eInclude Irvine32.inc
+
+.stack 4086
+.data
+	testVal DWORD 0F16Bh 
+.code
+main proc
+	MOV eax, 0
+	MOV eax, testVal
+	SHLD eax, eax, 32
+	exit
+main endp
+
+end main

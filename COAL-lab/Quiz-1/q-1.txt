@@ -1,0 +1,15 @@
+Include Irvine32.inc
+
+.data
+.code
+main proc
+	mov edx,0
+	mov ecx,0
+	mov dl,-120
+	mov ch,-30
+	add dl,ch
+
+	
+	invoke ExitProcess,0
+main endp
+end main
